@@ -1,10 +1,10 @@
 plugins {
-    application
+    id 'application'
 }
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(11))
+        languageVersion = JavaLanguageVersion.of(11)
     }
 }
 
@@ -18,6 +18,6 @@ dependencies {
 }
 
 application {
-    mainClass.set("cz.czechitas.intro.engine.Main")
+    mainClass = "cz.czechitas.recept.SpousteciTrida"
 }
 
