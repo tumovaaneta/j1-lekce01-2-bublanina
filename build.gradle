@@ -4,17 +4,12 @@ plugins {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(11)
+        languageVersion = JavaLanguageVersion.of(17)
     }
 }
 
 repositories {
     mavenCentral()
-}
-
-dependencies {
-    implementation("com.miglayout:miglayout-swing:5.0")
-    implementation("net.sevecek:sevecek-net-utils:0.9.1")
 }
 
 application {
