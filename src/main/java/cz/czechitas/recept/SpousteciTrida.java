@@ -40,7 +40,66 @@ public class SpousteciTrida {
         // Pouzivejte napovidani v editoru.
         // Vyskakuje samo nebo pomoci Ctrl+Mezernik
 
-        cervenaMiska.nalozSiJedenKus(vajicka);
+        int pocetVajec = 4;
+        for (int i = 0; i < pocetVajec; i++) {
+            cervenaMiska.nalozSiJedenKus(vajicka);
+        }
+
+        cervenaMiska.nalozSiCelyObsah(pytlikCukru);
+
+        mixer.zamichej(cervenaMiska);
+
+
+        cervenaMiska.nalozSiCelyObsah(maslo125g);
+
+        kuchynskaVaha.vynulujSeS(zlutaMiska);
+        kuchynskaVaha.zjistiHmotnost(zlutaMiska);
+
+        int vahaMouky = 0;
+        vahaMouky = vahaMouky++;
+
+//        kuchynskaVaha.zjistiHmotnost(zlutaMiska);
+//        for (int i = 0; i > 250; vahaMouky = vahaMouky + 1);{
+//            zlutaMiska.nalozSiTrochu(pytlikMouky);}
+////
+//        kuchynskaVaha.zjistiHmotnost(zlutaMiska);
+//
+
+        while (vahaMouky != 250) {
+            if (vahaMouky < 250) {
+                zlutaMiska.nalozSiTrochu(pytlikMouky);
+            } else {
+                zlutaMiska.vylozSiTrochu();
+            }
+            vahaMouky = kuchynskaVaha.zjistiHmotnost(zlutaMiska);
+        }
+
+        cervenaMiska.nalozSiObsahJineMisky(zlutaMiska);
+        cervenaMiska.nalozSiCelyObsah(prasekDoPeciva);
+        mixer.zamichej(cervenaMiska);
+        plech.preberSiObsah(cervenaMiska);
+
+        int pocetOvoce = 50;
+        for ( int i = 0; i < pocetOvoce; i++ ) {
+            plech.posypSeKusem(ovoce);
+        }
+//        System.out.println(plech.getPocetOvoce());
+
+        trouba.zapniSe(180);
+        trouba.nechejPect(5);
+        trouba.setPredehrata(true);
+        trouba.vlozSiDovnitr(plech);
+        trouba.nechejPect(25);
+        trouba.vypniSe();
+        trouba.vyndejObsahVen();
+        System.out.println("Jím bublaninu :)");
+
+
     }
 
+
 }
+
+
+
+
